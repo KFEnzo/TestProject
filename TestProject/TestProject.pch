@@ -1,0 +1,25 @@
+//
+//  TestProject.pch
+//  TestProject
+//
+//  Created by fandeng on 2018/8/17.
+//  Copyright © 2018年 Jia. All rights reserved.
+//
+
+#ifndef TestProject_pch
+#define TestProject_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* TestProject_pch */
+#pragma mark - 屏幕宽高
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IsiPhoneX ([UIScreen mainScreen].bounds.size.height>=812)
+#define UINavigationBarHeight (IsiPhoneX ? 88.0 : 64.0)
+#define UIStatusBarHeight (IsiPhoneX ? 44.0 : 20.0)
+#define UITabBarHeight (IsiPhoneX ? 83.0 : 49.0)
